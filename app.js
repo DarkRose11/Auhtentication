@@ -42,7 +42,7 @@ app.route("/register")
     .post(function (req, res) {
         const newUser = new User({
             email: req.body.username,
-            password: md5(req.body.password);
+            password: md5(req.body.password)
         });
         console.log(newUser.email);
         newUser.save(function (err) {
